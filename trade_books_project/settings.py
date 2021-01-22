@@ -26,7 +26,7 @@ SECRET_KEY = 'wy@b%=a&5^aeper8zjddeiw!s1efaf#9m&e*zmxj!seo)=)*@#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['desuderata.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tradebooks',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,8 +123,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATICFILES_DIRS = [STATIC_DIR, ]
+# STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
+
+# STATIC_ROOT = '/home/desuderata/trade_books_project/static/'
 
 #locations on computer where static files are stored
 STATICFILES_DIRS = [STATIC_DIR, ]
